@@ -149,6 +149,10 @@ labs(title = "Frecuencia de aparición de los enlaces",
 x = "Número de veces que aparece cada enlace",
 y = "Cantidad de enlaces",
 fill = "Tipo de URL") +
+scale_x_continuous(
+    breaks = scales::pretty_breaks(),
+    labels = function(x) format(x, scientific = FALSE, trim = TRUE)
+) +
 theme_minimal()
 
 histograma
